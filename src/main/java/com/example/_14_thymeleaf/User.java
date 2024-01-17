@@ -45,4 +45,16 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    @Override
+    public String toString() {
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("***** User Details *****\n");
+        sb.append("Email=" + getEmail() + "\n");
+        sb.append("Password=" + getPassword() + "\n");
+        sb.append("*****************************");
+
+        return sb.toString();
+    }
 }

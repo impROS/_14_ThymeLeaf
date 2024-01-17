@@ -14,6 +14,12 @@ public class UserForm {
     @NotBlank(message = "Password is mandatory")
     private String password;
 
+    public UserForm() {
+    }
+    public UserForm(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
 
     public String getName() {
         return name;

@@ -24,6 +24,9 @@ public class HomeRestController {
 
                 return ResponseEntity.badRequest().body(bindingResult.getFieldErrors());
           }
-          return ResponseEntity.ok(userService.getUser(userForm));
+          AjaxResponseBody result = new AjaxResponseBody();
+            result.setMessage("Success");
+            result.setResult(userService.getUser(userForm));
+          return ResponseEntity.ok(result);
     }
 }

@@ -29,4 +29,12 @@ public class AjaxResponseBody {
     public List<User> getResult() {
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "AjaxResponseBody{" +
+                "message='" + message + '\'' +
+                ", result=" + result +
+                '}';
+    }
 }

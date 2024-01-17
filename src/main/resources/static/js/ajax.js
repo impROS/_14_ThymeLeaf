@@ -4,10 +4,10 @@ $(document).ready(function () {
 
         event.preventDefault();
 
-        var userForm = {}
+        let userForm = {}
         userForm["email"] = $("#email").val();
         userForm["password"] = $("#password").val();
-
+        console.log("userForm: ", userForm)
         $.ajax({
             type: "POST",
             contentType: "application/json",
@@ -21,8 +21,7 @@ $(document).ready(function () {
                 var json = "Ajax Response"
                     + JSON.stringify(data, null, 4);
                 console.log("SUCCESS  json: ", json);
-
-
+                $('#feedback').html(json);
 
             },
             error: function (e) {
